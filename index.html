@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Men's T-Shirts | Everyday Comfort, Clean Style</title>
+  <meta name="description" content="Shop men's t-shirts made with soft, breathable cotton and perfect fits. Oversized, slim and classic styles. Easy returns." />
+
+  <!-- Google Ads / Conversion Ready -->
+  <!-- Add your Google Ads & Analytics tags here -->
+
+  <style>
+    :root {
+      --bg: #050608;
+      --card: #101014;
+      --border: #27272f;
+      --text: #f9fafb;
+      --muted: #a1a1af;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.16);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #020617 100%);
+      color: var(--text);
+    }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      font-size: 14px;
+    }
+    .logo span {
+      opacity: 0.75;
+      font-weight: 500;
+    }
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .pill {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      padding: 6px 12px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 52px;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+    .hero h1 {
+      font-size: clamp(32px, 4vw, 44px);
+      line-height: 1.1;
+      margin: 0 0 14px 0;
+    }
+    .hero h1 span {
+      color: var(--accent);
+    }
+    .hero p {
+      margin: 0 0 20px 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .fit-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 24px;
+      font-size: 13px;
+    }
+    .fit-tags span {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      background: var(--accent);
+      color: #020617;
+      padding: 13px 26px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+    .cta-btn-secondary {
+      text-decoration: none;
+      font-size: 13px;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .cta-btn-secondary::after {
+      content: '›';
+      font-size: 16px;
+    }
+    .trust-text {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top, #15803d 0, #020617 60%);
+      border-radius: 22px;
+      border: 1px solid rgba(34, 197, 94, 0.6);
+      padding: 22px 22px 18px;
+      position: relative;
+      overflow: hidden;
+      min-height: 280px;
+    }
+    .hero-card-inner {
+      border-radius: 18px;
+      padding: 36px 20px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(22, 163, 74, 0.7));
+      border: 1px solid rgba(187, 247, 208, 0.35);
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .hero-card-tag {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(187, 247, 208, 0.7);
+      color: var(--muted);
+    }
+    .hero-sizes {
+      display: inline-flex;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      margin-top: 18px;
+      font-size: 11px;
+      border: 1px dashed rgba(187, 247, 208, 0.8);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin: 46px 0 50px;
+    }
+    .highlight {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 16px 16px 14px;
+      border: 1px solid var(--border);
+      font-size: 13px;
+    }
+    .highlight h3 {
+      margin: 0 0 6px 0;
+      font-size: 14px;
+    }
+    .highlight p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .products-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .products-header h2 {
+      font-size: 22px;
+      margin: 0;
+    }
+    .products-header span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin-bottom: 52px;
+    }
+    .product {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 16px 15px 14px;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .product-img {
+      border-radius: 14px;
+      background: radial-gradient(circle at top, #15803d 0, #020617 60%);
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      padding: 0 6px;
+    }
+    .product-info h4 {
+      margin: 0 0 4px 0;
+      font-size: 15px;
+    }
+    .product-meta {
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      align-items: baseline;
+    }
+    .product-price {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .product-cta {
+      margin-top: 6px;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .chip {
+      border-radius: 999px;
+      padding: 4px 10px;
+      background: var(--accent-soft);
+      font-size: 11px;
+    }
+    .quick-link {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .quick-link::after {
+      content: '›';
+      margin-left: 4px;
+    }
+
+    .final-cta {
+      background: linear-gradient(135deg, #22c55e, #14b8a6);
+      border-radius: 22px;
+      padding: 36px 20px 32px;
+      text-align: center;
+      color: #022c22;
+    }
+    .final-cta h2 {
+      margin: 0 0 8px 0;
+      font-size: 26px;
+    }
+    .final-cta p {
+      margin: 0 0 22px 0;
+      font-size: 15px;
+    }
+
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-card {
+        order: -1;
+      }
+      .products-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">THREADLINE <span>BASICS</span></div>
+      <div class="header-cta">
+        <span>Free shipping over $40</span>
+        <div class="pill">30-day comfort guarantee</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="hero-eyebrow">
+            <span class="dot"></span> New colors & oversized fits
+          </div>
+          <h1>Men's T-shirts that <span>feel good</span> every wear.</h1>
+          <p>Ultra-soft cotton and breathable blends made for long days, late nights, and everything in between.</p>
+
+          <div class="fit-tags">
+            <span>Oversized</span>
+            <span>Classic fit</span>
+            <span>Slim fit</span>
+            <span>Crew neck</span>
+            <span>V-neck</span>
+          </div>
+
+          <div class="cta-row">
+            <a href="#shop" class="cta-btn">Shop Men's T-Shirts</a>
+            <a href="#fits" class="cta-btn-secondary">See size & fit guide</a>
+          </div>
+          <div class="trust-text">15,000+ tees sold · Easy, no-questions returns</div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-card-tag">Best-seller</div>
+          <div class="hero-card-inner">
+            Hero product / lifestyle image area<br />
+            (Show your top men's tee look here)
+            <div class="hero-sizes">Sizes XS – XXL · Regular & tall</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="fits" class="highlights">
+        <article class="highlight">
+          <h3>Buttery-soft feel</h3>
+          <p>Premium combed cotton and blends that stay soft even after multiple washes.</p>
+        </article>
+        <article class="highlight">
+          <h3>Perfect everyday fits</h3>
+          <p>From relaxed to slim, cuts designed to sit right on shoulders and chest.</p>
+        </article>
+        <article class="highlight">
+          <h3>No twist, no shrink</h3>
+          <p>Pre-shrunk, durable neck rib that keeps its shape, wash after wash.</p>
+        </article>
+      </section>
+
+      <div class="products-header">
+        <div>
+          <h2>Pick your go-to tee</h2>
+          <span>Select a style to continue to product page.</span>
+        </div>
+      </div>
+
+      <section id="shop" class="products">
+        <article class="product">
+          <div class="product-img">Classic Crew T-Shirt Image</div>
+          <div class="product-info">
+            <h4>Classic Crew Neck</h4>
+            <div class="product-meta">
+              <span>Everyday fit · Mid-weight</span>
+              <span class="product-price">From $19</span>
+            </div>
+            <div class="product-cta">
+              <span class="chip">Best for daily wear</span>
+              <a href="#" class="quick-link">View details</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-img">Oversized T-Shirt Image</div>
+          <div class="product-info">
+            <h4>Oversized Street Tee</h4>
+            <div class="product-meta">
+              <span>Boxy fit · Drop shoulder</span>
+              <span class="product-price">From $22</span>
+            </div>
+            <div class="product-cta">
+              <span class="chip">Streetwear favourite</span>
+              <a href="#" class="quick-link">View details</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-img">Slim Fit T-Shirt Image</div>
+          <div class="product-info">
+            <h4>Slim Fit Tee</h4>
+            <div class="product-meta">
+              <span>Tailored torso · Clean lines</span>
+              <span class="product-price">From $21</span>
+            </div>
+            <div class="product-cta">
+              <span class="chip">Great under jackets</span>
+              <a href="#" class="quick-link">View details</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="product-img">V-Neck T-Shirt Image</div>
+          <div class="product-info">
+            <h4>Essential V-Neck</h4>
+            <div class="product-meta">
+              <span>Subtle V · Lightweight</span>
+              <span class="product-price">From $18</span>
+            </div>
+            <div class="product-cta">
+              <span class="chip">Smart-casual ready</span>
+              <a href="#" class="quick-link">View details</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="final-cta">
+        <h2>Ready for your new favorite tee?</h2>
+        <p>Choose your fit, pick your color, and check out in under a minute.</p>
+        <a href="#shop" class="cta-btn">Shop Men's T-Shirts Now</a>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 Threadline Basics. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
